@@ -18,31 +18,31 @@ Y luego, dependiendo de la respuesta, debería mostrar uno de los siguientes men
 2 > Oh, qué pena... ¿Ya intentaste aprender otros lenguajes?
 */
 
-const nombre = prompt("¿Cuál es tu nombre?")
+const nombre = prompt("¿Cuál es tu nombre?");
 
-let edad = prompt("¿Cuántos años tienes?")
-edad = parseInt(edad)
+let edad = prompt("¿Cuántos años tienes?");
+edad = parseInt(edad);
 while (isNaN(edad) || edad <= 0) {
-    edad = parseInt(prompt("Por favor, ingresa una edad válida."))
+    edad = parseInt(prompt("Por favor, ingresa una edad válida."));
 }
 
-const lenguaje = prompt("¿Qué lenguaje de programación estás estudiando?")
+const lenguaje = prompt("¿Qué lenguaje de programación estás estudiando?");
 
-alert(`¡Hola ${nombre}, tienes ${edad} años y ya estás aprendiendo ${lenguaje}!`)
+alert(`¡Hola ${nombre}, tienes ${edad} años y ya estás aprendiendo ${lenguaje}!`);
 
-let mensaje = `¿Te gusta estudiar ${lenguaje}? Responde con el número 1 para SÍ o 2 para NO.`
-let respuesta
+let mensaje = `¿Te gusta estudiar ${lenguaje}? Responde con el número 1 para SÍ o 2 para NO.`;
+let respuesta;
 
 do {
-    respuesta = prompt(mensaje)
+    respuesta = prompt(mensaje);
     switch (respuesta) {
         case '1':
-            alert("¡Muy bien! Sigue estudiando y tendrás mucho éxito.")
-            break
+            alert("¡Muy bien! Sigue estudiando y tendrás mucho éxito.");
+            break;
         case '2':
-            alert("Oh, qué pena... ¿Ya intentaste aprender otros lenguajes?")
-            break
+            alert("Oh, qué pena... ¿Ya intentaste aprender otros lenguajes?");
+            break;
         default:
-            mensaje = `Respuesta no válida. Por favor, SOLO responde con el número 1 para SÍ o 2 para NO.`
+            mensaje = `Respuesta no válida. Por favor, SOLO responde con el número 1 para SÍ o 2 para NO.`;
     }
 } while (respuesta !== '1' && respuesta !== '2')
